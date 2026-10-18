@@ -1,0 +1,64 @@
+# ============================================================
+# DIINA Pilot Evaluation Pipeline - Central Configuration
+# All paths are relative to the repository root unless absolute.
+# ============================================================
+
+project:
+  name: "DIINA Pilot Evaluation"
+  version: "1.0.0"
+  blinded_protocol: true
+
+paths:
+  # Primary raw data (blinded dual-rater evaluation matrix)
+  evaluation_matrix: "/mnt/data/DIINA_Pilot_Evaluation_Matrix.xlsx"
+  evaluation_sheet: "Blinded_Evaluation_Sheet"
+  master_key_sheet: "Master_Key_and_Analytics"
+  provenance_sheet: "DIINA_Provenance_Log"
+
+  # Supporting raw data files (optional, if present)
+  benchmark_metadata: "/mnt/data/benchmark_items_metadata.csv"
+  paired_comparisons: "/mnt/data/diina_paired_comparisons.csv"
+  evaluator_ratings_tidy: "/mnt/data/evaluator_ratings_tidy.csv"
+
+  # Pipeline outputs
+  output_dir: "/mnt/data/scripts/outputs"
+  analysis_data: "/mnt/data/scripts/outputs/analysis_data.csv"
+  log_file: "/mnt/data/scripts/outputs/pipeline.log"
+
+evaluation:
+  # Rating scale for each dimension
+  scale_min: 1
+  scale_max: 5
+  # Dimensions used for the composite (Dims 1-4 per protocol)
+  composite_dimensions:
+    - "Dim 1: Factual / Technical Accuracy (1-5)"
+    - "Dim 2: Pedagogical Appropriateness (1-5)"
+    - "Dim 3: Linguistic Suitability (1-5)"
+    - "Dim 4: Cultural & Contextual Relevance / Fairness (1-5)"
+  # Dim 5 is a provenance/accountability dimension, reported separately
+  provenance_dimension: "Dim 5: Accountability & Provenance (1-5)"
+  evaluators: ["EVAL_01", "EVAL_02"]
+  expected_cases: 20
+  expected_arms: 2
+  expected_records: 80
+
+clustering:
+  # Thematic cluster assignment by benchmark domain
+  clusters:
+    Basic Machine Learning:
+      - "Diagnostics"
+    Advanced Neural Architectures:
+      - "Therapeutics"
+    Applied Modeling:
+      - "Pathology"
+    Socio-Technical Implications:
+      - "Ethics"
+  default_cluster: "Applied Modeling"
+
+statistics:
+  icc_model: "ICC(2,1)"          # two-way random effects, single measure
+  alpha: 0.05
+  condition_comparison:
+    test: "paired_t"
+    alternative: "two-sided"
+    require_normality_check: true
