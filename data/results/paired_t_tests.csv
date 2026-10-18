@@ -1,0 +1,6 @@
+﻿Dimension,Baseline_Mean,DIINA_Mean,Mean_Diff,SE_Diff,t_stat,df,p_value,p_formatted
+Tech_Accuracy,3.748,4.499,0.751,0.059,12.663,19,1.039e-10,<0.001
+Ped_Appropriateness,3.746,4.518,0.772,0.061,12.581,19,1.161e-10,<0.001
+Ling_Suitability,3.754,4.514,0.76,0.064,11.946,19,2.795e-10,<0.001
+Cult_Relevance,3.755,4.502,0.747,0.058,12.948,19,7.099e-11,<0.001
+Composite_Score,3.75,4.508,0.758,0.058,12.965,19,6.939e-11,<0.001

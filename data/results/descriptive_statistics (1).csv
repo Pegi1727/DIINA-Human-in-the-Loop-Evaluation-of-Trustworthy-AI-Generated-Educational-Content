@@ -1,0 +1,11 @@
+﻿Condition,Metric,N,Mean,SD,Median,Min,Max,IQR,CI_Lower_95,CI_Upper_95
+Baseline,Tech_Accuracy,20,3.748,0.256,3.821,3.228,4.182,0.423,3.629,3.868
+Baseline,Ped_Appropriateness,20,3.746,0.216,3.798,3.232,4.028,0.316,3.645,3.847
+Baseline,Ling_Suitability,20,3.754,0.241,3.792,3.28,4.112,0.404,3.641,3.867
+Baseline,Cult_Relevance,20,3.755,0.227,3.834,3.246,4.024,0.353,3.649,3.861
+Baseline,Composite_Score,20,3.75,0.231,3.785,3.24,4.06,0.43,3.642,3.858
+DIINA,Tech_Accuracy,20,4.499,0.152,4.464,4.304,4.876,0.216,4.428,4.57
+DIINA,Ped_Appropriateness,20,4.518,0.194,4.455,4.256,4.902,0.309,4.427,4.609
+DIINA,Ling_Suitability,20,4.514,0.182,4.498,4.262,4.994,0.195,4.429,4.599
+DIINA,Cult_Relevance,20,4.502,0.168,4.469,4.258,4.876,0.2,4.423,4.58
+DIINA,Composite_Score,20,4.508,0.165,4.455,4.31,4.908,0.21,4.431,4.586

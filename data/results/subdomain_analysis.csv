@@ -1,0 +1,5 @@
+﻿Domain,N_items,Baseline_Mean_SD,DIINA_Mean_SD,Delta,t_stat,p_value,d_z
+Fundamental,5,3.71 ± 0.33,4.48 ± 0.16,0.772,6.356,0.003,2.842
+Advanced,5,3.63 ± 0.16,4.54 ± 0.08,0.912,18.877,<0.001,8.442
+Applied,5,3.93 ± 0.11,4.52 ± 0.24,0.59,5.091,0.007,2.277
+Socio-Technical,5,3.73 ± 0.21,4.49 ± 0.19,0.76,5.19,0.007,2.321

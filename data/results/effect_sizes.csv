@@ -1,0 +1,6 @@
+﻿Dimension,Cohens_dz,Hedges_g_av,Win_Rate_Percentage,CLES_Percent
+Tech_Accuracy,2.832,3.43,100.0,99.4
+Ped_Appropriateness,2.813,3.604,100.0,99.6
+Ling_Suitability,2.671,3.423,100.0,99.4
+Cult_Relevance,2.895,3.595,100.0,99.6
+Composite_Score,2.899,3.623,100.0,99.6

@@ -1,0 +1,6 @@
+﻿Dimension,ICC_2_1,F_stat,df1,df2,p_val,CI_Lower_95,CI_Upper_95,ICC_Classification
+Tech_Accuracy,0.546,6.792,19,76,5.627e-10,0.731,1,Moderate
+Ped_Appropriateness,0.657,10.437,19,76,2.742e-14,0.845,1,Moderate
+Ling_Suitability,0.621,8.962,19,76,1.146e-12,0.811,1,Moderate
+Cult_Relevance,0.592,8.455,19,76,4.487e-12,0.796,1,Moderate
+Composite_Score,1.0,16088.322,19,76,1.110e-16,1.0,1,Excellent
