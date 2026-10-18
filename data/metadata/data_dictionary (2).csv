@@ -1,0 +1,60 @@
+﻿Folder,File_Name,Column_Name,Data_Type,Description,Allowed_Values_Range
+raw,DIINA_Pilot_Evaluation_Matrix.xlsx,(workbook),XLSX,Pilot evaluation matrix workbook with blinded raw evaluator ratings for both arms.,All sheets as distributed
+raw,raw_llm_outputs.csv,Item_ID,string,Unique item identifier (Item_01–Item_20).,Item_01–Item_20
+raw,raw_llm_outputs.csv,Domain,string,Thematic category of the concept.,Fundamental; Advanced; Applied; Socio-Technical
+raw,raw_llm_outputs.csv,Concept,string,ML/AI concept evaluated.,20 concept titles
+raw,raw_llm_outputs.csv,Baseline_Prompt,string,Zero-shot professor-persona prompt used to elicit the baseline LLM output.,Free text (English)
+raw,raw_llm_outputs.csv,Baseline_Raw_Output,string,Unedited verbatim baseline LLM output for the item.,Free text (English)
+raw,diina_curated_outputs.csv,Item_ID,string,Unique item identifier.,Item_01–Item_20
+raw,diina_curated_outputs.csv,Domain,string,Thematic category of the concept.,Fundamental; Advanced; Applied; Socio-Technical
+raw,diina_curated_outputs.csv,Concept,string,ML/AI concept evaluated.,20 concept titles
+raw,diina_curated_outputs.csv,DIINA_Curated_Output,string,DIINA pipeline revised (human-in-the-loop curated) output for the item.,Free text (English)
+raw,diina_curated_outputs.csv,Revision_Rationale,string,Provenance note documenting why and how the baseline output was revised.,Free text (English)
+raw,diina_curated_outputs.csv,SHA256_Hash,string,SHA-256 digest of DIINA_Curated_Output for integrity/chain-of-custody.,64 hex characters
+processed,diina_evaluation_clean.csv,Record_ID,string,Unique blinded evaluation record ID.,R001–R200
+processed,diina_evaluation_clean.csv,Unit_ID,string,Evaluation unit identifier (item x arm).,U_01–U_20
+processed,diina_evaluation_clean.csv,Item_ID,string,Concept item identifier.,Item_01–Item_20
+processed,diina_evaluation_clean.csv,Evaluator_ID,string,Anonymized expert evaluator identifier.,EV_01–EV_05
+processed,diina_evaluation_clean.csv,Arm_Condition,string,Blinded experimental arm.,Baseline; DIINA
+processed,diina_evaluation_clean.csv,Tech_Accuracy,float,Technical accuracy score.,1.00–5.00
+processed,diina_evaluation_clean.csv,Ped_Appropriateness,float,Pedagogical appropriateness score.,1.00–5.00
+processed,diina_evaluation_clean.csv,Ling_Suitability,float,Linguistic suitability score.,1.00–5.00
+processed,diina_evaluation_clean.csv,Cult_Relevance,float,Cultural relevance score.,1.00–5.00
+processed,diina_evaluation_clean.csv,Composite_Score,float,Weighted composite (0.30/0.28/0.22/0.20).,1.00–5.00
+processed,diina_composite_scores.csv,Item_ID,string,Concept item identifier.,Item_01–Item_20
+processed,diina_composite_scores.csv,Domain,string,Thematic category.,Fundamental; Advanced; Applied; Socio-Technical
+processed,diina_composite_scores.csv,Baseline_Composite,float,"Mean composite across 5 evaluators, baseline arm.",1.00–5.00
+processed,diina_composite_scores.csv,DIINA_Composite,float,"Mean composite across 5 evaluators, DIINA arm.",1.00–5.00
+processed,diina_composite_scores.csv,Absolute_Delta,float,DIINA minus baseline composite.,-4.00 to 4.00
+processed,diina_composite_scores.csv,Relative_Gain_Percent,float,Percentage gain relative to baseline.,-100 to 100
+processed,diina_item_level_scores.csv,Item_ID,string,Concept item identifier.,Item_01–Item_20
+processed,diina_item_level_scores.csv,Domain,string,Thematic category.,Fundamental; Advanced; Applied; Socio-Technical
+processed,diina_item_level_scores.csv,Condition,string,Experimental arm.,Baseline; DIINA
+processed,diina_item_level_scores.csv,Tech_Accuracy_Mean,float,Mean technical accuracy for the item x condition.,1.00–5.00
+processed,diina_item_level_scores.csv,Ped_Appropriateness_Mean,float,Mean pedagogical appropriateness.,1.00–5.00
+processed,diina_item_level_scores.csv,Ling_Suitability_Mean,float,Mean linguistic suitability.,1.00–5.00
+processed,diina_item_level_scores.csv,Cult_Relevance_Mean,float,Mean cultural relevance.,1.00–5.00
+processed,diina_item_level_scores.csv,Composite_Mean,float,Mean composite for the item x condition.,1.00–5.00
+results,descriptive_statistics.csv,Condition,string,Experimental arm.,Baseline; DIINA
+results,descriptive_statistics.csv,Metric,string,Scored dimension.,Tech_Accuracy; Ped_Appropriateness; Ling_Suitability; Cult_Relevance; Composite_Score
+results,descriptive_statistics.csv,N,integer,Number of items contributing to the statistic.,20
+results,descriptive_statistics.csv,Mean/SD/Median/Min/Max/IQR,float,Standard descriptive statistics of per-item means.,Per metric
+results,descriptive_statistics.csv,CI_Lower_95 / CI_Upper_95,float,95% confidence interval of the mean (t-based).,Per metric
+results,paired_t_tests.csv,Dimension,string,Scored metric tested.,5 metrics
+results,paired_t_tests.csv,Baseline_Mean / DIINA_Mean,float,Arm means over 20 paired items.,1.00–5.00
+results,paired_t_tests.csv,Mean_Diff / SE_Diff,float,Mean paired difference and its standard error.,-4 to 4 / >0
+results,paired_t_tests.csv,t_stat / df,float,Paired t statistic and degrees of freedom.,t(19)
+results,paired_t_tests.csv,p_value / p_formatted,string,Exact p and formatted p (APA style).,p<0.001 for all metrics
+results,effect_sizes.csv,Dimension,string,Scored metric.,5 metrics
+results,effect_sizes.csv,Cohens_dz,float,Cohen's d_z for paired designs.,Large (d_z>2 for all metrics)
+results,effect_sizes.csv,Hedges_g_av,float,Hedges' g_av bias-corrected effect size.,Large
+results,effect_sizes.csv,Win_Rate_Percentage,float,Percent of items where DIINA > baseline.,0–100
+results,effect_sizes.csv,CLES_Percent,float,Common-language effect size (normal approach).,0–100
+results,inter_rater_reliability.csv,Dimension,string,Scored metric (DIINA arm).,5 metrics
+results,inter_rater_reliability.csv,ICC_2_1,float,"ICC(2,1) two-way random single-rater absolute agreement.",0–1 (Composite = 1.000)
+results,inter_rater_reliability.csv,F_stat / df1 / df2 / p_val,float,ANOVA components of the ICC.,"F(19,76)"
+results,inter_rater_reliability.csv,CI_Lower_95 / CI_Upper_95,float,95% CI (McGraw & Wong F-approximation).,0–1
+results,subdomain_analysis.csv,Domain,string,Thematic category.,4 categories
+results,subdomain_analysis.csv,N_items,integer,Items per category.,5–8
+results,subdomain_analysis.csv,Baseline_Mean_SD / DIINA_Mean_SD,string,Mean ± SD of composite per arm per domain.,Text (Mean ± SD)
+results,subdomain_analysis.csv,Delta / t_stat / p_value / d_z,float,Paired contrast within the subdomain.,Per domain
