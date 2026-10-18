@@ -1,0 +1,21 @@
+﻿Task_ID,Domain_Subject,System_Prompt,Raw_LLM_Output,Identified_Errors,Error_Count,Action_Type,Revised_Output,Citation_Source,Reviewer_ID,Review_Time_min,Reviewer_Confidence,Approval_Status
+ITEM_01,Machine Learning / Regularization,Explain the difference between L1 and L2 regularization with one concrete example for first-year MSc students.,,,,,,"Hastie, Tibshirani & Friedman (2009), The Elements of Statistical Learning, 2nd ed., Springer, Ch. 3 (Sec. 3.4, Ridge Regression/Lasso)",REV_01,,,Pending
+ITEM_02,NLP / Byte-Pair Encoding,Define byte-pair encoding (BPE) tokenization and walk through one worked example.,,,,,,"Jurafsky & Martin (2026), Speech and Language Processing, 3rd ed. draft (Aug 19, 2026 release), Ch. 2, Words and Tokens",REV_02,,,Pending
+ITEM_03,NLP / Perplexity,Explain what perplexity measures in language-model evaluation and how to interpret it.,,,,,,"Jurafsky & Martin (2026), Speech and Language Processing, 3rd ed. draft, Ch. 3, N-gram Language Models",REV_01,,,Pending
+ITEM_04,Statistics / Hypothesis Testing,Explain the difference between Type I and Type II errors using a classroom-appropriate analogy.,,,,,,,REV_03,,,Pending
+ITEM_05,Statistics / Distributions,Explain the central limit theorem and its practical implications for sampling in social-science research.,,,,,,,REV_02,,,Pending
+ITEM_06,Machine Learning / Bias-Variance,Explain the bias-variance tradeoff with a concrete underfitting/overfitting example.,,,,,,"Hastie, Tibshirani & Friedman (2009), The Elements of Statistical Learning, 2nd ed., Sec. 2.9 (Model Selection and the Bias-Variance Tradeoff)",REV_01,,,Pending
+ITEM_07,Machine Learning / Evaluation,"Explain precision, recall and F1-score for binary classification with a worked example.",,,,,,"Jurafsky & Martin (2026), Speech and Language Processing, 3rd ed. draft, Ch. 4, Evaluation: Precision, Recall, F-measure",REV_02,,,Pending
+ITEM_08,NLP / Logistic Regression,"Explain logistic regression for text classification, including the sigmoid function and cross-entropy loss.",,,,,,"Jurafsky & Martin (2026), Speech and Language Processing, 3rd ed. draft, Ch. 5, Logistic Regression",REV_03,,,Pending
+ITEM_09,AI Ethics / Algorithmic Fairness,Discuss how algorithmic bias can arise in educational AI systems and give two mitigation strategies.,,,,,,,REV_01,,,Pending
+ITEM_10,Computer Science / Big-O Notation,Explain Big-O time complexity with everyday analogies suitable for non-CS undergraduates.,,,,,,,REV_02,,,Pending
+ITEM_11,Physics / Newton's Laws,Explain Newton's three laws of motion with one everyday example for each law.,,,,,,,REV_03,,,Pending
+ITEM_12,Physics / Energy,Distinguish kinetic and potential energy and describe energy conservation in a roller-coaster example.,,,,,,,REV_01,,,Pending
+ITEM_13,Biology / Cell Division,Explain the difference between mitosis and meiosis for a first-year biology course.,,,,,,,REV_02,,,Pending
+ITEM_14,Biology / Genetics,Explain Mendelian inheritance using a monohybrid cross with a Punnett square description.,,,,,,,,,,Pending
+ITEM_15,History / Silk Road,Summarize the historical role of the Silk Road in cultural and scientific exchange between Asia and Europe.,,,,,,,REV_01,,,Pending
+ITEM_16,History / Scientific Revolution,Explain how the Scientific Revolution changed European approaches to knowledge and authority.,,,,,,,,,,Pending
+ITEM_17,Literature / Literary Devices,"Define metaphor, simile and personification with one original example of each.",,,,,,,REV_02,,,Pending
+ITEM_18,Linguistics / Morphology,Explain the difference between derivational and inflectional morphology with examples.,,,,,,"Jurafsky & Martin (2026), Speech and Language Processing, 3rd ed. draft, Ch. 2, Word Normalization, Lemmatization and Stemming",REV_03,,,Pending
+ITEM_19,Mathematics / Derivatives,Explain the derivative as rate of change using a real-world motion example.,,,,,,,REV_01,,,Pending
+ITEM_20,Mathematics / Probability,Explain conditional probability using Bayes' rule with a medical-testing example.,,,,,,,REV_02,,,Pending
