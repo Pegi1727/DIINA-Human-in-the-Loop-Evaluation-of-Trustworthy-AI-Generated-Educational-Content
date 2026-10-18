@@ -1,0 +1,32 @@
+DIINA Data Quality Report
+Generated programmatically from evaluator_ratings_tidy.csv and processed item-level scores.
+
+== Records ==
+- evaluator_ratings_tidy.csv: 80 rows (20 items x 2 conditions x 2 evaluators)
+- item_level_scores.csv: 40 rows (20 items x 2 conditions)
+- Conditions: ['Baseline', 'DIINA']; Evaluators: ['E1', 'E2']
+
+== Missing values ==
+- Dim5 column: entirely empty (80/80 missing) -> excluded from analysis
+- Dim1-Dim4 & Composite missing: 0 (complete data)
+
+== Score ranges (expected 1-5) ==
+- Dim1: min=3, max=5
+- Dim2: min=3, max=5
+- Dim3: min=3, max=5
+- Dim4: min=4, max=5
+- Composite: min=3.75, max=5.0
+
+== Duplicates ==
+- Fully duplicated rows: 0
+
+== Inter-rater agreement ==
+- Evaluators E1 and E2 gave IDENTICAL ratings on all 40 evaluated units across all 4 dimensions
+  (100% exact agreement; ICC(2,1)=1.000 boundary case, MS_error=0).
+- Caveat: Unanimous agreement reflects standardized rubric calibration / consensus protocol under zero
+  within-unit variance; it does NOT constitute independent empirical external validation of the framework.
+- Degenerate CIs and F-based tests omitted / marked indeterminate in inter_rater_agreement.csv.
+
+== Checks ==
+- Composite = mean(Dim1..Dim4) for all rows: True
+- All scores within 1-5: True
