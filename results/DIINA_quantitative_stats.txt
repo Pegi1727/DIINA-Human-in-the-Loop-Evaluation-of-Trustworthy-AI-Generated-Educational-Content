@@ -1,0 +1,53 @@
+DIINA Pilot Evaluation — Quantitative Statistics (extracted with pandas/scipy from /mnt/data/DIINA_Pilot_Evaluation_Matrix.xlsx)
+
+DESIGN
+- 20 paired cases (CASE_01–CASE_20); each case rated blind under two codes: _A = DIINA, _B = Baseline.
+- 2 blinded evaluators (EVAL_01, EVAL_02) x 4 dimensions (1–5 Likert); Composite = mean(Dims 1–4).
+- Unit of analysis = case-level mean score per arm (n = 20 pairs). Dim 5 (Accountability) column exists but is EMPTY in all 80 rows — no data.
+
+1. DESCRIPTIVES (mean ± SD, ddof=1)
+                              DIINA          Baseline      Mean diff
+Composite (Dims 1–4)        4.5125 ± 0.2361   3.7500 ± 0.0000   +0.7625
+Dim 1 Factual/Accuracy      4.3000 ± 0.4702   3.5000 ± 0.5130   +0.8000
+Dim 2 Pedagogical           4.5000 ± 0.5130   3.7000 ± 0.4702   +0.8000
+Dim 3 Linguistic            4.2500 ± 0.4443   3.5000 ± 0.5130   +0.7500
+Dim 4 Cultural/Fairness     5.0000 ± 0.0000   4.3000 ± 0.4702   +0.7000
+Dim 5 Accountability        not available (empty column)
+
+2. PAIRED t-TEST (DIINA vs Baseline, n=20, df=19)
+Composite:  t = 14.4413, p = 1.071e-11 (p < .001)
+Dim 1:      t = 5.1415,  p = 5.802e-05
+Dim 2:      t = 5.1415,  p = 5.802e-05
+Dim 3:      t = 7.5498,  p = 3.918e-07
+Dim 4:      t = 6.6583,  p = 2.283e-06
+All differences significant at α = .05.
+
+3. COHEN'S d (paired / within-subject, d_z = mean(diff)/SD(diff))
+Composite: d_z = 3.2292 (very large)
+Dim 1: 1.1497 | Dim 2: 1.1497 | Dim 3: 1.6882 | Dim 4: 1.4888
+
+4. WIN RATE (% of 20 cases where DIINA > Baseline)
+Composite: 100.0% (20/20)
+Dim 1: 65% | Dim 2: 65% | Dim 3: 75% | Dim 4: 70%
+
+5. INTER-RATER RELIABILITY
+- EVAL_01 vs EVAL_02 ratings are identical on all 80 rating events:
+  Pearson r = 1.000, ICC(2,1) = 1.000, ICC(2,2) = 1.000 (perfect agreement; ceiling — note as limitation, e.g. dual review by same protocol).
+- Note: the two code-arms are syntactically distinguishable? No — both evaluators gave identical scores, so blinding held only nominally; report ICC = 1.00 with caution.
+
+6. THEMATIC CATEGORY BREAKDOWN (Composite; DIINA vs Baseline, mean diff, t(df=4), p, d_z, win%)
+Basic/Fundamental (Items 1–5):   4.4500 vs 3.7500, +0.7000, t=7.4833, p=.0017, d_z=3.3466, 100%
+Advanced (Items 6–10):           4.5500 vs 3.7500, +0.8000, t=8.5524, p=.0010, d_z=3.8247, 100%
+Applied (Items 11–15):           4.5000 vs 3.7500, +0.7500, t=5.4772, p=.0054, d_z=2.4495, 100%
+Socio-Technical/Ethics (16–20):  4.5500 vs 3.7500, +0.8000, t=6.5320, p=.0028, d_z=2.9212, 100%
+Per-dimension in each category: see console summary; subcategory dimension-level t-tests (df=4) are significant only where p<.05:
+  D1 Basic p=.070, D2 Basic p=.070; D3 Advanced p=.070, D4 Advanced p=.070;
+  D1 Applied p=.099, D2 Applied p=.099, D4 Applied p=.070; D1 Socio p=.099, D2 Socio p=.099.
+  Significant within categories: D3 Basic (t=4.000,p=.016), D4 Basic (t=4.000,p=.016),
+  D1 Advanced (t=3.162,p=.034), D2 Advanced (t=3.162,p=.034),
+  D3 Applied (t=4.000,p=.016), D3 Socio (t=4.000,p=.016), D4 Socio (t=4.000,p=.016).
+
+CAVEATS FOR THE RESULTS SECTION
+- Baseline Composite SD = 0 (exactly 3.75 every case) and Dim 4 Baseline pattern is perfectly uniform — synthetic/constructed data; state transparently.
+- Dim 5 empty: omit or report as not collected.
+- n=20 cases, small sample; two evaluators with perfect agreement limits generalizability of reliability estimate.
